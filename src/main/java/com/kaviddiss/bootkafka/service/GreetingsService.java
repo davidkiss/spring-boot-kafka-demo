@@ -43,7 +43,7 @@ public class GreetingsService {
     }
 
     @KafkaListener(topics = KAFKA_TOPICS_DEMO_CONFIG, containerFactory = "kafkaJsonListenerContainerFactory")
-    public void eventListener(Greetings greetings) {
+    public void greetingsListener(Greetings greetings) {
         log.info("Received greetings: {}", greetings);
     }
 }

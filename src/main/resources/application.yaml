@@ -1,0 +1,13 @@
+spring:
+  kafka:
+    # use default host:port for Kafka running locally:
+    bootstrapServers: localhost:9092
+    producer:
+      valueSerializer: org.springframework.kafka.support.serializer.JsonSerializer
+    consumer:
+      group-id: com.kaviddiss.demo
+      auto-offset-reset: earliest
+
+kafka:
+  topics:
+    demo: kaviddiss-demo
